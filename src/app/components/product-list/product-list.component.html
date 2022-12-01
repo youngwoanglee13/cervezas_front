@@ -1,0 +1,27 @@
+<div *ngFor="let cerveza of cervezas" class="card card-body mb-2">
+    <div class="row">
+        <div class="col-md-8">
+            <ul>
+                <li>
+                    id:{{cerveza.id}}
+                </li>
+                <li>
+                    nombre:{{cerveza.nombre}}
+                </li>
+                <li>
+                    nombre:{{cerveza.tipo}}
+                </li>
+                <li>
+                    nombre:{{cerveza.precio}}
+                </li>
+            </ul>
+            <button class="btn btn-danger" (click)="deleteProduct(cerveza.id)">
+                Eliminar
+            </button>
+            <button class="btn btn-secondary" [routerLink]="['/product/edit', cerveza.id]">
+                Editar
+            </button>
+        </div> 
+           
+    </div>
+</div>
